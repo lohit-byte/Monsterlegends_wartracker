@@ -1,4 +1,4 @@
-#MonsterLegends_wartracher-bot
+# MonsterLegends_wartracker
 # ⚔️ Discord War Bot
 
 A highly customizable Discord bot for managing team wars. It tracks defence/attack phases, pings missing attackers, manages absences, tracks warnings, and automatically handles player aliases.
@@ -22,4 +22,8 @@ A highly customizable Discord bot for managing team wars. It tracks defence/atta
 1. Clone the repository:
    ```bash
    git clone https://github.com/lohit-byte/Monsterlegends_wartracker.git
-   cd Discord-War-Bot
+   cd Monsterlegends_wartracker
+   pip install -r requirements.txt
+   cp config.example.json config.json
+   python main.py
+
