@@ -1,0 +1,23 @@
+{
+  "token": "YOUR_DISCORD_BOT_TOKEN_HERE",
+  "staff_role_ids": [123456789012345678],
+  "lead_role_ids": [123456789012345678],
+  "heartbeat_channel_id": 0,
+  "sync_channel_id": 0,
+  "alert_ping_id": 0,
+  "instance_name": "primary",
+  "teams": {
+    "TeamA": {
+      "channel_id": 111111111111111111,
+      "member_role_id": 222222222222222222,
+      "absence_channel_id": 333333333333333333,
+      "team_lead_role_ids": [444444444444444444]
+    },
+    "TeamB": {
+      "channel_id": 555555555555555555,
+      "member_role_id": 666666666666666666,
+      "absence_channel_id": 777777777777777777,
+      "team_lead_role_ids": [888888888888888888]
+    }
+  }
+}
