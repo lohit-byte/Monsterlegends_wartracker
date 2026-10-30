@@ -1,4 +1,4 @@
-# main.py — v30 (Public Release)
+# main.py — v1 (Public Release)
 import os
 import json
 
@@ -32,8 +32,8 @@ from botutils import (
 import botstorage
 import sync
 
-VERSION = "v30"
-CREATOR = "YourName"
+VERSION = "v1"
+CREATOR = "Lohit"
 
 # ============ LOAD CONFIG ============
 def load_config():
