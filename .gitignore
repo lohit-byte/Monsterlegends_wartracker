@@ -1,9 +1,15 @@
+# Sensitive Data
 config.json
 .env
-__pycache__/
-*.pyc
-venv/
+
+# Bot Data
 wars.json
 warbot_data.json
 sync_meta.json
 bad_sha.txt
+aliases.json
+
+# Python
+__pycache__/
+*.pyc
+*.bak
