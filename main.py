@@ -42,9 +42,13 @@ def load_config():
         raise SystemExit("ERROR: config.json not found. Rename config.example.json to config.json and fill it out.")
 
 CONFIG = load_config()
-TOKEN = CONFIG.get("token")
+TOKEN = os.environ.get("DISCORD_TOKEN") or CONFIG.get("token")
 if not TOKEN or TOKEN == "YOUR_DISCORD_BOT_TOKEN_HERE":
-    raise SystemExit("ERROR: Set your bot token in config.json")
+    raise SystemExit("ERROR: Set your bot token in config.json or as an environment variable.")
+
+# Add these lines to support failover environments
+os.environ["CODE_SOURCE"] = CONFIG.get("code_source", "primary")
+PREFIX = CONFIG.get("prefix", "!")
 
 STAFF_ROLE_IDS = set(CONFIG.get("staff_role_ids", []))
 LEAD_ROLE_IDS = set(CONFIG.get("lead_role_ids", []))
@@ -108,7 +112,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 intents.reactions = True
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix=PREFIX, intents=intents)
 bot.remove_command("help")
 
 sync.register(bot, INSTANCE_NAME, lambda: _is_active, SYNC_CHANNEL_ID)
