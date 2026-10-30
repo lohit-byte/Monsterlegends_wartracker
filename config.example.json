@@ -1,5 +1,8 @@
 {
   "token": "YOUR_DISCORD_BOT_TOKEN_HERE",
+  "prefix": "!",
+  "instance_name": "primary",
+  "code_source": "primary",
   "staff_role_ids": [123456789012345678],
   "lead_role_ids": [123456789012345678],
   "heartbeat_channel_id": 0,
