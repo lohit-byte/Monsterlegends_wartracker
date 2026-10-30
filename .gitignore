@@ -1,0 +1,9 @@
+config.json
+.env
+__pycache__/
+*.pyc
+venv/
+wars.json
+warbot_data.json
+sync_meta.json
+bad_sha.txt
