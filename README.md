@@ -26,4 +26,6 @@ A highly customizable Discord bot for managing team wars. It tracks defence/atta
    pip install -r requirements.txt
    cp config.example.json config.json
    python main.py
+   ```
+
 
