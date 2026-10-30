@@ -43,8 +43,8 @@ def load_config():
 
 CONFIG = load_config()
 TOKEN = CONFIG.get("token")
-if not TOKEN or TOKEN == "YOUR_BOT_TOKEN_HERE":
-    raise SystemExit("ERROR: Set your DISCORD_TOKEN in config.json")
+if not TOKEN or TOKEN == "YOUR_DISCOR_BOT_TOKEN_HERE":
+    raise SystemExit("ERROR: Set your bot token in config.json")
 
 STAFF_ROLE_IDS = set(CONFIG.get("staff_role_ids", []))
 LEAD_ROLE_IDS = set(CONFIG.get("lead_role_ids", []))
